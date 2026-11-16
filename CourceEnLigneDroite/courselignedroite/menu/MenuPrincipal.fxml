@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<StackPane prefHeight="600" prefWidth="800" stylesheets="@../menu/style/menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courselignedroite.menu.controlleurMenu">
+
+    <!-- Fond avec texture -->
+    <Pane styleClass="background-pane" />
+
+    <!-- Contenu principal centré -->
+    <VBox alignment="CENTER" spacing="0" styleClass="main-container">
+
+        <!-- Bloc titre -->
+        <VBox alignment="CENTER" spacing="6" styleClass="title-block">
+            <!-- Ligne décorative haut -->
+            <HBox alignment="CENTER" spacing="8">
+                <Line endX="120" startX="0" styleClass="deco-line" />
+                <Label styleClass="deco-star" text="✦" />
+                <Line endX="120" startX="0" styleClass="deco-line" />
+            </HBox>
+
+            <Label styleClass="title-main" text="LA COURSE" />
+            <Label styleClass="title-sub" text="EN LIGNE DROITE" />
+
+            <!-- Ligne décorative bas -->
+            <HBox alignment="CENTER" spacing="8">
+                <Line endX="120" startX="0" styleClass="deco-line" />
+                <Label styleClass="deco-star" text="✦" />
+                <Line endX="120" startX="0" styleClass="deco-line" />
+            </HBox>
+        </VBox>
+
+        <!-- Espaceur -->
+        <Region prefHeight="28" />
+
+        <!-- Infos mode + auteurs -->
+        <VBox alignment="CENTER" spacing="4" styleClass="info-block">
+            <Label styleClass="info-mode" text="Mode : Standard">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></Label>
+            <Label styleClass="info-authors" text="Créé par  INNOCENTI Axel  •  INNOCENTI Loris  •  DAVEAU Amaury" />
+        </VBox>
+
+        <!-- Espaceur -->
+        <Region prefHeight="32">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Region>
+
+        <!-- Boutons de navigation -->
+        <VBox alignment="CENTER" spacing="12" styleClass="buttons-container">
+
+            <Button fx:id="btnJouer" onAction="#handleJouer" prefWidth="300" styleClass="btn-menu, btn-primary" text="  JOUER">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Button>
+
+            <Button fx:id="btnCharger" onAction="#handleCharger" prefWidth="300" styleClass="btn-menu, btn-secondary" text="  CHARGER UNE SAUVEGARDE">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Button>
+
+            <Button fx:id="btnStyle" onAction="#handleStyle" prefWidth="300" styleClass="btn-menu, btn-secondary" text="  STYLE">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Button>
+
+            <Button fx:id="btnRegles" onAction="#handleRegles" prefWidth="300" styleClass="btn-menu, btn-secondary" text="  RÈGLES">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Button>
+
+            <Region prefHeight="8" />
+
+            <Button fx:id="btnQuitter" onAction="#handleQuitter" prefWidth="300" styleClass="btn-menu, btn-quitter" text="QUITTER">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin></Button>
+
+        </VBox>
+
+        <!-- Espaceur bas -->
+        <Region prefHeight="24" />
+
+        <!-- Pied de page -->
+        <Label styleClass="footer-label" text="IUT de Rodez · BUT Informatique · 2025-2026" />
+
+    </VBox>
+
+</StackPane>
