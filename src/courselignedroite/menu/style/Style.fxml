@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<StackPane prefHeight="600" prefWidth="800" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courselignedroite.menu.style.ControlleurStyle">
+
+    <Pane styleClass="background-pane" />
+
+    <VBox alignment="CENTER" spacing="0" styleClass="main-container">
+
+        <!-- Titre -->
+        <VBox alignment="CENTER" spacing="6" styleClass="title-block">
+            <HBox alignment="CENTER" spacing="8">
+                <Line endX="120" startX="0" styleClass="deco-line" />
+                <Label styleClass="deco-star" text="✦" />
+                <Line endX="120" startX="0" styleClass="deco-line" />
+            </HBox>
+            <Label styleClass="title-main" text="  STYLE" />
+            <Label styleClass="title-sub" text="Personnalisez l'apparence du jeu" />
+            <HBox alignment="CENTER" spacing="8">
+                <Line endX="120" startX="0" styleClass="deco-line" />
+                <Label styleClass="deco-star" text="✦" />
+                <Line endX="120" startX="0" styleClass="deco-line" />
+            </HBox>
+        </VBox>
+
+        <Region prefHeight="24" />
+
+        <!-- Panneau des options -->
+        <VBox alignment="CENTER" spacing="18" styleClass="saisie-container">
+
+            <!-- Style des pions -->
+            <VBox alignment="CENTER" spacing="8">
+                <Label styleClass="saisie-label title-sub" text="FORME DES PIONS" />
+                <HBox alignment="CENTER" spacing="12">
+                    <ToggleButton fx:id="tbPionRond" onAction="#handlePionRond" prefWidth="140" styleClass="btn-toggle" text="⬤  Rond" />
+                    <ToggleButton fx:id="tbPionCarre" onAction="#handlePionCarre" prefWidth="140" styleClass="btn-toggle" text="■  Carré" />
+                    <ToggleButton fx:id="tbPionCoeur" onAction="#handlePionCoeur" prefWidth="140" styleClass="btn-toggle" text="♥ Cœur" />
+                </HBox>
+            </VBox>
+         <VBox alignment="CENTER" spacing="8">
+            <children>
+               <Label styleClass="saisie-label title-sub" text="COULEUR DES PIONS" />
+               <HBox alignment="CENTER" spacing="12">
+                  <children>
+                     <ToggleButton fx:id="tbBleuRouge" onAction="#handleBleuRouge" prefWidth="140" styleClass="btn-toggle" text="BLEU/ROUGE" />
+                     <ToggleButton fx:id="tbOrangeVert" onAction="#handleOrangeVert" prefWidth="140" styleClass="btn-toggle" text="ORANGE/VERT" />
+                     <ToggleButton fx:id="tbJauneViollet" onAction="#handleJauneViolet" prefWidth="140" styleClass="btn-toggle" text="JAUNE/VIOLET" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+
+            <!-- Style du fond de l'application -->
+            <VBox alignment="CENTER" spacing="8">
+                <Label styleClass="saisie-label title-sub" text="FOND DE L'APPLICATION" />
+                <HBox alignment="CENTER" spacing="12">
+                    <ToggleButton fx:id="tbFondBois" onAction="#handleFondBois" prefWidth="140" styleClass="btn-toggle" text="🪵  Bois" />
+                    <ToggleButton fx:id="tbFondNuit" onAction="#handleFondNuit" prefWidth="140" styleClass="btn-toggle" text="🌙  Nuit" />
+                    <ToggleButton fx:id="tbFondClair" onAction="#handleFondClair" prefWidth="140" styleClass="btn-toggle" text="☀  Clair" />
+                </HBox>
+            </VBox>
+
+            <!-- Style du fond du plateau -->
+            <VBox alignment="CENTER" spacing="8">
+                <Label styleClass="saisie-label title-sub" text="FOND DU PLATEAU" />
+                <HBox alignment="CENTER" spacing="12">
+                    <ToggleButton fx:id="tbPlateauClassique" onAction="#handlePlateauClassique" prefWidth="140" styleClass="btn-toggle" text="🟫  Classique" />
+                    <ToggleButton fx:id="tbPlateauPierre" onAction="#handlePlateauPierre" prefWidth="140" styleClass="btn-toggle" text="🪨  Pierre" />
+                    <ToggleButton fx:id="tbPlateauVert" onAction="#handlePlateauVert" prefWidth="140" styleClass="btn-toggle" text="🌿  Herbe" />
+                </HBox>
+            </VBox>
+
+        </VBox>
+
+        <Region prefHeight="28" />
+
+        <!-- Boutons bas -->
+        <HBox alignment="CENTER" spacing="20" />
+
+        <Region prefHeight="10" />
+
+        <Button onAction="#handleRetour" prefWidth="300" styleClass="btn-menu, btn-quitter" text="← RETOUR AU MENU" />
+
+        <Region prefHeight="10" />
+        <Label styleClass="footer-label" text="IUT de Rodez · BUT Informatique · 2025-2026" />
+
+    </VBox>
+
+</StackPane>

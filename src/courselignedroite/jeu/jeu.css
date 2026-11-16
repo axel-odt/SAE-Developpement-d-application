@@ -1,0 +1,205 @@
+/* ──────────────────────────────────────────────────────────────
+   2.  FONDS DU PLATEAU
+   ────────────────────────────────────────────────────────────── */
+
+/* Classique – teintes bois sombre (défaut) */
+.plateau-classique {
+    -fx-background-color: rgba(30, 14, 4, 0.70);
+    -fx-border-color: #D4A017;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6;
+}
+
+/* Pierre – gris ardoise */
+.plateau-pierre {
+    -fx-background-color: rgba(50, 50, 60, 0.80);
+    -fx-border-color: #9E9E9E;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6;
+}
+
+/* Herbe – vert foncé */
+.plateau-vert {
+    -fx-background-color: rgba(20, 50, 20, 0.80);
+    -fx-border-color: #66BB6A;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6;
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   3.  COULEURS DES PIONS
+   ────────────────────────────────────────────────────────────── */
+
+/* Palette BLEU / ROUGE  (défaut) */
+.palette-bleuRouge .pion-j0 {
+    -fx-background-color: #C62828;   /* rouge */
+    -fx-border-color: white;
+}
+.palette-bleuRouge .pion-j1 {
+    -fx-background-color: #1565C0;   /* bleu */
+    -fx-border-color: white;
+}
+
+/* Palette ORANGE / VERT */
+.palette-orangeVert .pion-j0 {
+    -fx-background-color: #E65100;   /* orange */
+    -fx-border-color: white;
+}
+.palette-orangeVert .pion-j1 {
+    -fx-background-color: #2E7D32;   /* vert */
+    -fx-border-color: white;
+}
+
+/* Palette JAUNE / VIOLET */
+.palette-jauneViolet .pion-j0 {
+    -fx-background-color: #F9A825;   /* jaune */
+    -fx-border-color: #4A148C;
+}
+.palette-jauneViolet .pion-j1 {
+    -fx-background-color: #6A1B9A;   /* violet */
+    -fx-border-color: white;
+}
+
+/* Glow doré quand le pion est cliquable (tour actif) */
+.pion-actif {
+    -fx-effect: dropshadow(gaussian, #F0C94A, 10, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   4.  FORMES DES PIONS
+   ────────────────────────────────────────────────────────────── */
+
+/* Rond (défaut) – rayon 50 % = cercle parfait */
+.pion-rond {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-shape: null;            /* annule un éventuel shape précédent */
+}
+
+/* Carré – coins légèrement arrondis */
+.pion-carre {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-shape: null;
+}
+
+/* Cœur – path SVG centré 0 0, taille nominale 32×32
+   Source : https://codepen.io/anthonydugois/pen/mewdyZ  (adapté) */
+.pion-coeur {
+    -fx-shape: "M 16 28 C 16 28 2 18 2 10 C 2 5.5 5.5 2 10 2 C 12.5 2 14.8 3.2 16 5 C 17.2 3.2 19.5 2 22 2 C 26.5 2 30 5.5 30 10 C 30 18 16 28 16 28 Z";
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/* Taille commune à toutes les formes */
+.pion-rond,
+.pion-carre,
+.pion-coeur {
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-border-width: 1.5;
+    -fx-padding: 0;
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   5.  ÉLÉMENTS UI COMMUNS
+   ────────────────────────────────────────────────────────────── */
+
+/* Menubar */
+.menu-bar {
+    -fx-background-color: rgba(20, 10, 2, 0.85);
+    -fx-border-color: transparent transparent rgba(212,160,23,0.3) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.menu-bar .label {
+    -fx-text-fill: #C8B89A;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+}
+.context-menu {
+    -fx-background-color: #2A1608;
+    -fx-border-color: rgba(212,160,23,0.4);
+    -fx-border-width: 1;
+}
+.menu-item .label {
+    -fx-text-fill: #F5EDD3;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+}
+.menu-item:focused {
+    -fx-background-color: rgba(212,160,23,0.2);
+}
+
+/* Label "Tour de" */
+.lbl-tour {
+    -fx-text-fill: #F0C94A;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Label dé */
+.lbl-de {
+    -fx-text-fill: #F0C94A;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Message contextuel */
+.lbl-message {
+    -fx-text-fill: #F5EDD3;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* Bouton LANCER LE DÉ – réutilise les classes du menu.css */
+
+/* Réserve Rouge */
+.reserve-rouge {
+    -fx-background-color: rgba(198, 40, 40, 0.15);
+    -fx-border-color: rgba(198, 40, 40, 0.50);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10 8 10 8;
+    -fx-min-width: 56;
+    -fx-min-height: 120;
+}
+
+/* Réserve Bleu */
+.reserve-bleu {
+    -fx-background-color: rgba(21, 101, 192, 0.15);
+    -fx-border-color: rgba(21, 101, 192, 0.50);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10 8 10 8;
+    -fx-min-width: 56;
+    -fx-min-height: 120;
+}
+
+/* Texte dans les réserves */
+.lbl-reserve-rouge { -fx-text-fill: #EF9A9A; -fx-font-size: 10px; -fx-font-family: "Georgia"; }
+.lbl-reserve-bleu  { -fx-text-fill: #90CAF9; -fx-font-size: 10px; -fx-font-family: "Georgia"; }
+
+/* Pied de page */
+.footer-label {
+    -fx-text-fill: rgba(200, 184, 154, 0.35);
+    -fx-font-family: "Georgia";
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
